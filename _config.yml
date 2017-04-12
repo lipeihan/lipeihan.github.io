@@ -1,42 +1,47 @@
-# Basic
-title: Pierce
-subtitle: 个人站
-description: 欢迎来到我的个人站~
-# 头像里面的标题
-avatarTitle: lipeihan
-# 头像里面的描述
-avatarDesc: iOS Developer
-url: "http://piercelph.io"
+# Site settings
+title: 刘彦玮的技术博客
+email: coolnameismy@hotmail.com
+description: > #刘彦玮的技术博客
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://liuyanwei.jumppo.com" # the base hostname & protocol for your site
+# url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
+twitter_username: coolnameismy@hotmail.com
+github_username:  coolnameismy
 
-# Comment
-comment:
-    # disqus: Pierce
-    duoshuo: Pierce
+# Build settings
+#markdown: kramdown
+permalink: /:year/:month/:day/:title.html   #博文的固定链接
+paginate: 10                                #分页时每页博文数量
+author:                                     #自定义常亮
+  name: 刘彦玮
+  email: coolnameismy@hotmail.com
+  link: http://liuyanwei.jumppo.com/
+  weibo: http://weibo.com/1897719834
+  github: http://github.com/coolnameismy
+title: 刘彦玮的技术博客                             #自定义常量
 
-# Social
-social:
-    github: lipeihan
-    mail: piercelph@163.com
+# avatar头像及Favicon
+avatar: https://avatars1.githubusercontent.com/u/5010799?v=3&amp;s=460
+#favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
-permalink: /:year/:month/:title/
-# Format
-highlighter: rouge
+locals:                                     #自定义常量
+  tags: 标签
+  about: 关于
+active: 技术                                 #自定义常量
+subscribe_rss: /pages/atom.xml              #订阅地址
+markdown: kramdown                         #markdown解释器
 
-textColor: #FF0000
+# google analytics 设置
+#ga:
+#  id:
+#  url:
+#
 
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: clear
+# baidu analytics 设置
 
-# Navigation buttons in the front page.s
-nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 关于我, description: about, url: '/about'}      
-    
+ba:
+  src: //hm.baidu.com/hm.js?22d94317cfb9f9e0bb476228d9f79278
 
-# Pagination
-gems: [jekyll-paginate,jekyll-sitemap]
-paginate: 20
-paginate_path: "page/:num/"
-
-
+# disqus 设置
+disqus:
+  shortname: coolnameismy
