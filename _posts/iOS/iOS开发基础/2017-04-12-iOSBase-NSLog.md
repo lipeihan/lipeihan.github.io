@@ -1,10 +1,10 @@
 ---
 layout: post
-title: NSLog 的输出格式
+title: NSLog的输出格式
 category: iOS开发基础
-tags: NSLog
-keywords:NSLog
-description: NSLog 的输出格式
+tags: 基础
+keywords: iOS NSLog
+description:
 ---
 
 ```objective-c
