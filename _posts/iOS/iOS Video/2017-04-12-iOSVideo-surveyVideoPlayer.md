@@ -7,7 +7,7 @@ keywords: iOS video
 description: iOS survey Video Player
 ---
 
-## 一、官方提供的播放方式：AVPlayer、MPMediaPlayer
+#### 一、官方提供的播放方式：AVPlayer、MPMediaPlayer
 
 - 优点：提供较完整较稳定的API
 - 缺点：支持的视频编码格式很有限：H.264、MPEG-4，扩展名（压缩格式）：.mp4、.mov、.m4v、.m2v、.3gp、.3g2等
