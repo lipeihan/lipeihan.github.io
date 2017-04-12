@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Video Player调研
-category: iOS Video
+category: iOS视频
 tags: video
 keywords: iOS video
 description: iOS survey Video Player
