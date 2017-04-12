@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 博客的使用方法
-category: 用法
+category: 其他
 tags: 用法
 description: 介绍博客的使用方法
 ---
