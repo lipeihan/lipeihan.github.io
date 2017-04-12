@@ -17,7 +17,7 @@ author:                                     #自定义常亮
 title: Pierce的技术博客
 
 # avatar头像及Favicon
-avatar: assets/images/avatar.jpeg
+avatar: assets/images/avatar.jpg
 #favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
 
 locals:                                     #自定义常量
