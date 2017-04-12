@@ -17,7 +17,7 @@ description: iOS survey Video Player
 
  
 
-## 二、使用基于ffmpeg的kxmovie
+### 二、使用基于ffmpeg的kxmovie
 
 1. 在github上面下载kxmovieDemo[https://github.com/kinglonghuang/kxmovie](https://github.com/kinglonghuang/kxmovie)
 2. 将编译好的FFMPEG库拖到Demo中(注：需要是编译好的)
