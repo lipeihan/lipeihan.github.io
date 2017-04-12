@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NSLog的输出格式
-category: iOS开发基础
+category: iOS基础
 tags: 基础
 keywords: iOS NSLog
 description:

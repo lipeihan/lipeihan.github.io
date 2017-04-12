@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 单例的定义
-category: iOS开发基础
+category: iOS基础
 tags: 基础
 keywords: iOS Singleton
 description: 单例的定义

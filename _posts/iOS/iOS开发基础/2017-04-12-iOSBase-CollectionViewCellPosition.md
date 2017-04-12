@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 获取cell 在collection view 中的位置
-category: iOS开发基础
+category: iOS基础
 tags: 基础
 keywords: iOS CollectionView cell position
 description: CollectionView cell position
