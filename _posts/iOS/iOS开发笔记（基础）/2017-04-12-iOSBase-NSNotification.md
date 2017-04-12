@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 通知的使用
-category: iOS开发笔记（基础）
+category: iOS开发基础
 tags: 通知
 keywords: NSNotification
 description: 通知的使用
