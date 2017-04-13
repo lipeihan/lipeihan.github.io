@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 键盘项目相关文档
-category: iOS
+category: iOS键盘
 tags: keyboard
 description: 键盘项目相关文档
 ---
