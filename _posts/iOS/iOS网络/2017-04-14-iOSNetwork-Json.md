@@ -12,7 +12,7 @@ description: Json XML 解析
 
 
 
-## 一、JSON 解析相关
+## JSON 解析相关
 
 ### JSON的定义
 
@@ -113,7 +113,7 @@ Other rules may apply. Calling [`isValidJSONObject:`](https://developer.apple.co
     *	被转换的OC对象
     *	opt：生成JSON数据的选项
     *	error：错误
-    *	返回OC对象
+    *	返回JSON Data数据
     */
    + (NSData *)dataWithJSONObject:(id)obj 
                           options:(NSJSONWritingOptions)opt 
@@ -165,5 +165,130 @@ Other rules may apply. Calling [`isValidJSONObject:`](https://developer.apple.co
 
 
 
+```objective-c
+//JSON To Objective-C
+- (void)convertJsonToOC {
+    
+    NSString *jsonString = @"{\"name\":\"lipeihan\",\"age\":18,\"skill\":[\"iOS\",\"Android\",\"Unity 3d\"]}";
+    
+    NSData *jsonData =  [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    /**
+     *	通过NSData的方式生成OC对象
+     *	data:JSON 数据
+     *	options:
+     *      NSJSONReadingOptions
+     *          NSJSONReadingMutableContainers  = (1UL << 0),
+     *          容器可变，NSMutableDictionary 或NSMutableArray。
+     *
+     *          NSJSONReadingMutableLeaves      = (1UL << 1),
+     *          叶子可变，返回的 JSON 对象中字符串的值为 NSMutableString。
+     *
+     *          NSJSONReadingAllowFragments     = (1UL << 2)
+     *          允许 JSON 字符串最外层既不是 NSArray 也不是 NSDictionary，但必须是有效的 JSON 片段
+     *	error：错误
+     *	return：返回OC对象
+     */
+    NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    
+    NSLog(@"convertJsonToOC = %@" ,jsonObj);
+}
+```
+
+
+
+**运行结果：**
+
+![JSON1](assets/postImages/iOSNetwork/Json/JSON1.jpeg)
+
+
+
+```objective-c
+//Objective-C Object to JSON
+- (void)convertOCToJson {
+
+    NSString *testString = @"Test Json";
+    NSArray *testArray = @[@"iOS",@"Android",@"Unity 3d"];
+ 
+    NSDictionary *testDictionary = @{
+                                     @"name":@"lipeihan",
+                                     @"age":@(18),
+                                     @"skill":@[@"iOS",@"Android",@"Unity 3d"]
+                                     };
+    
+    NSLog(@"-----testString----");
+    [self jsonConvertedByObjectiveCObject:testString];
+    
+    NSLog(@"-----testArray----");
+    [self jsonConvertedByObjectiveCObject:testArray];
+    
+    NSLog(@"-----testDictionary----");
+    [self jsonConvertedByObjectiveCObject:testDictionary];
+    
+}
+
+- (BOOL)jsonConvertedByObjectiveCObject:(id)ocObject {
+
+    BOOL isValid = [NSJSONSerialization isValidJSONObject:ocObject];
+    
+    if (isValid) {
+        
+        /**
+         *	通过OC对象生成JSON Data数据
+         *	obj:被转换的OC对象
+         *	options：生成JSON数据的选项
+         *	error：错误
+         *	返回JSON Data数据
+         */
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:ocObject
+                                                           options:NSJSONWritingPrettyPrinted
+                                                             error:nil];
+        
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                     encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"jsonString = %@",jsonString);
+    } else {
+        NSLog(@"ocObject can not be converted to JSON Data");
+    }
+ 
+    return isValid;
+}
+```
+
+
+
+**运行输出**
+
+```objective-c
+2017-04-14 19:23:53.141 JsonTestDemo[2078:310884] -----testString----
+2017-04-14 19:23:53.142 JsonTestDemo[2078:310884] ocObject can not be converted to JSON Data
+  //正如上文提到的，并不是所有的对象都能转换成json数据
+  
+2017-04-14 19:23:53.142 JsonTestDemo[2078:310884] -----testArray----
+2017-04-14 19:23:53.143 JsonTestDemo[2078:310884] jsonString = [
+  "iOS",
+  "Android",
+  "Unity 3d"
+]
+2017-04-14 19:24:24.919 JsonTestDemo[2078:310884] -----testDictionary----
+2017-04-14 19:24:25.775 JsonTestDemo[2078:310884] jsonString = {
+  "name" : "lipeihan",
+  "age" : 18,
+  "skill" : [
+    "iOS",
+    "Android",
+    "Unity 3d"
+  ]
+}
+```
+
+## 附录
+
 ### Demo地址
 
+https://github.com/lipeihan/JsonTestDemo/tree/master
+
+### 最后
+
+如果对大家有帮助，请[github上follow和star](https://github.com/liepihan)，本文发布在[Pierce的技术博客](https://github.com/liepihan)，转载请注明出处
