@@ -27,13 +27,18 @@ description: Json XML 解析
 ##### JSON的语法格式
 
 1. JSON 里面的内容一般以键值对（key：value）存在。在iOS中，key的形式必须是字符串，用双引号“”包裹，key和value之间用冒号“:”隔开。
+
 2. 两个数据之间由逗号隔开。
+
 3. 花括号“{}”包起来的数据表示对象。
+
 4. 方括号“[]”包起来的数据表示数组。
 
+   ​
 
 
-### Rules of converting JSON To Objective-C Object
+
+### JSON解析的相关规则
 
 **[Apple 规定：](https://developer.apple.com/reference/foundation/nsjsonserialization?language=objc#overview)**
 
@@ -74,7 +79,7 @@ Other rules may apply. Calling [`isValidJSONObject:`](https://developer.apple.co
 
 
 
-### APIs of converting JSON To Objective-C Object
+### JSON解析的相关API
 
 **关于JSON 和Objective-C Object 相互之间的转换主要的类是：NSJSONSerialization。**
 
@@ -162,8 +167,6 @@ Other rules may apply. Calling [`isValidJSONObject:`](https://developer.apple.co
    ​
 
 ### JSON解析Demo
-
-
 
 ```objective-c
 //JSON To Objective-C
