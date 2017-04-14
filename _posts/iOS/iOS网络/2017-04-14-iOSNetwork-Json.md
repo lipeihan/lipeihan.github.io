@@ -199,7 +199,7 @@ Other rules may apply. Calling [`isValidJSONObject:`](https://developer.apple.co
 
 **运行结果：**
 
-![JSON1](assets/postImages/iOSNetwork/Json/JSON1.jpeg)
+![JSON1](/assets/postImages/iOSNetwork/Json/JSON1.jpeg)
 
 
 
